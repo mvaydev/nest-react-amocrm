@@ -14,10 +14,12 @@
     "antd": "^5.18.1",
     "axios": "^1.7.2",
     "prettier": "^3.3.2",
+    "qs": "^6.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/qs": "^6.9.15",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",

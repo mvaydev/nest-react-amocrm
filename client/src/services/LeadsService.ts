@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { http } from './http'
 
 export interface Lead {
@@ -24,15 +23,26 @@ export interface Lead {
     }
 }
 
-export const getLeads = async () => {
+export interface GetLeadsQuery {
+    price?: {
+        from?: number
+        to?: number
+    }
+}
+
+export const getLeads = async (query?: GetLeadsQuery) => {
     let data = null
 
     try {
-        const response = await http.get<string>('/leads')
+        const response = await http.get<string>('/leads', {
+            params: {
+                filter: query,
+            },
+        })
 
-        data = JSON.parse(response.data)
+        data = response.status === 200 && JSON.parse(response.data)
     } catch (error) {
-        console.error(error)
+        data = null
     } finally {
         return data
     }

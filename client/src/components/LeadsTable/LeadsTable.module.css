@@ -11,3 +11,11 @@
     gap: 24px;
     align-items: center;
 }
+
+.filterDropdown {
+    padding: 10px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
