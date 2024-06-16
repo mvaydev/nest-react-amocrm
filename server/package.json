@@ -1,7 +1,6 @@
 {
-  "name": "nestjs-test",
+  "name": "server",
   "version": "0.0.1",
-  "description": "Nest.js test application",
   "author": "Maksim Vaysbekker <mvaydev@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
